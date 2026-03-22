@@ -44,6 +44,7 @@
     .hero {
       padding: 140px 48px 90px; max-width: 1100px; margin: 0 auto;
       display: grid; grid-template-columns: 1fr 280px; gap: 70px; align-items: center;
+      position: relative;
     }
     .hero-eyebrow {
       font-size: 0.72rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase;
@@ -103,6 +104,49 @@
     }
     .ticker-item::before { content: '◆'; font-size: 0.5rem; color: var(--green-mid); }
     @keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+    /* ── CELTICS LOGO WATERMARK ── */
+    .celtics-watermark {
+      position: absolute; opacity: 0.04; pointer-events: none; z-index: 0;
+      background: url('celtics_logo.png') center/contain no-repeat;
+    }
+    .hero { position: relative; }
+    .hero::before {
+      content: ''; position: absolute;
+      right: -40px; top: 50%; transform: translateY(-50%);
+      width: 500px; height: 500px;
+      background: url('celtics_logo.png') center/contain no-repeat;
+      opacity: 0.04; pointer-events: none; z-index: 0;
+    }
+    .project-section { position: relative; overflow: hidden; }
+    .project-section::before {
+      content: ''; position: absolute;
+      right: -60px; bottom: -60px;
+      width: 340px; height: 340px;
+      background: url('celtics_logo.png') center/contain no-repeat;
+      opacity: 0.035; pointer-events: none; z-index: 0;
+    }
+    .about-wrap { position: relative; overflow: hidden; }
+    .about-wrap::before {
+      content: ''; position: absolute;
+      left: -60px; top: 50%; transform: translateY(-50%);
+      width: 400px; height: 400px;
+      background: url('celtics_logo.png') center/contain no-repeat;
+      opacity: 0.06; pointer-events: none; z-index: 0;
+      filter: brightness(10);
+    }
+
+    /* ── CELTICS LOGO ACCENT ── */
+    .section-logo-accent {
+      width: 28px; height: 28px;
+      background: url('celtics_logo.png') center/contain no-repeat;
+      display: inline-block; flex-shrink: 0; opacity: 0.85;
+    }
+    .nav-logo-img {
+      width: 22px; height: 22px;
+      background: url('celtics_logo.png') center/contain no-repeat;
+      display: inline-block; vertical-align: middle; margin-right: 8px;
+    }
 
     /* ── DIVIDER ── */
     .section-divider {
@@ -287,6 +331,69 @@
     }
     .footer-gh:hover { background: rgba(255,255,255,0.07); border-color: rgba(255,255,255,0.4); }
 
+    /* ── TD GARDEN BANNER ── */
+    .td-banner {
+      position: relative; width: 100%; height: 420px;
+      overflow: hidden; margin-top: 58px;
+    }
+    .td-banner-img {
+      width: 100%; height: 100%; object-fit: cover; object-position: center 30%;
+      display: block;
+    }
+    .td-banner-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(10,40,20,0.75) 100%);
+    }
+    .court-lines {
+      position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none;
+    }
+    .td-banner-content {
+      position: absolute; inset: 0;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      text-align: center; gap: 12px;
+    }
+    .td-banner-tag {
+      font-size: 0.75rem; font-weight: 600; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--green-mid);
+      background: rgba(0,0,0,0.35); padding: 6px 18px; border-radius: 20px;
+      border: 1px solid rgba(168,223,196,0.3);
+    }
+    .td-banner-title {
+      font-size: clamp(2rem, 5vw, 3.8rem); font-weight: 800;
+      color: white; letter-spacing: -0.02em; line-height: 1.1;
+      text-shadow: 0 2px 20px rgba(0,0,0,0.5);
+    }
+    .td-banner-sub {
+      font-size: 0.85rem; color: rgba(255,255,255,0.6); font-weight: 400;
+      letter-spacing: 0.05em;
+    }
+
+    /* ── PHOTO GALLERY ── */
+    .gallery-strip {
+      display: grid; grid-template-columns: 1fr 0.6fr 1fr;
+      gap: 0; height: 260px; overflow: hidden;
+    }
+    .gallery-item { position: relative; overflow: hidden; cursor: pointer; }
+    .gallery-item img {
+      width: 100%; height: 100%; object-fit: cover;
+      transition: transform 0.5s ease; filter: brightness(0.75);
+    }
+    .gallery-item:hover img { transform: scale(1.06); filter: brightness(0.9); }
+    .gallery-item-tall img { object-position: center top; }
+    .gallery-caption {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      padding: 10px 16px;
+      background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+      font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em;
+      text-transform: uppercase; color: rgba(255,255,255,0.85);
+    }
+    .gallery-item::after {
+      content: ''; position: absolute; inset: 0;
+      border: 2px solid transparent; transition: border-color 0.3s;
+    }
+    .gallery-item:hover::after { border-color: var(--green); }
+
     /* ── TECH STACK STEPS ── */
     .stack-step { margin-bottom: 36px; }
     .stack-step-header { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
@@ -338,11 +445,9 @@
 
 <!-- NAV -->
 <nav>
-  <span class="nav-logo">Declan Davis</span>
+  <span class="nav-logo"><span class="nav-logo-img"></span>Declan Davis</span>
   <ul class="nav-links">
     <li><a href="#projects">Projects</a></li>
-    <li><a href="#celtics">Celtics Dashboard</a></li>
-    <li><a href="#nba">NBA Predictor</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="https://twitter.com/declandavis17" target="_blank">𝕏 Twitter</a></li>
   </ul>
@@ -401,11 +506,26 @@
   </div>
 </div>
 
-
+<!-- PHOTO GALLERY -->
+<div class="gallery-strip">
+  <div class="gallery-item">
+    <img src="td_garden_modern.jpg" alt="TD Garden Modern">
+    <div class="gallery-caption">TD Garden · Boston, MA</div>
+  </div>
+  <div class="gallery-item gallery-item-tall">
+    <img src="boston_garden.jpg" alt="Boston Garden 1987">
+    <div class="gallery-caption">1987 Finals · Boston Garden</div>
+  </div>
+  <div class="gallery-item">
+    <img src="td_garden_modern.jpg" alt="Celtics Court">
+    <div class="gallery-caption">Game Night · Celtics</div>
+  </div>
+</div>
 
 <!-- PROJECT OVERVIEW CARDS -->
 <div id="projects" style="padding-top:80px;">
   <div class="section-divider" style="margin-bottom:32px;">
+    <span class="section-logo-accent"></span>
     <span class="label">01 // Projects</span>
     <div class="line"></div>
   </div>
@@ -473,7 +593,7 @@
     <!-- HEADER -->
     <div class="project-header">
       <div>
-        <div class="project-num">Project 01 · Power BI · Dashboard</div>
+        <div class="project-num"><span class="section-logo-accent" style="width:20px;height:20px;vertical-align:middle;margin-right:6px;display:inline-block;"></span>Project 01 · Power BI · Dashboard</div>
         <h2 class="project-title">Celtics Ticketing<br>Intelligence Dashboard</h2>
         <p class="project-subtitle">A multi-page analytics dashboard built with synthetic sports data</p>
       </div>
@@ -679,7 +799,7 @@ JOIN social_metrics s
   <div class="project-inner">
     <div class="project-header">
       <div>
-        <div class="project-num">Project 02 · Python · Predictive Model</div>
+        <div class="project-num"><span class="section-logo-accent" style="width:20px;height:20px;vertical-align:middle;margin-right:6px;display:inline-block;"></span>Project 02 · Python · Predictive Model</div>
         <h2 class="project-title">NBA Points Per<br>Game Predictor</h2>
         <p class="project-subtitle">A live data-driven model for predicting NBA player scoring output</p>
       </div>
@@ -755,7 +875,7 @@ JOIN social_metrics s
 <!-- ABOUT -->
 <div class="about-wrap" id="about">
   <div class="about-inner">
-    <div class="about-label">03 // About Me</div>
+    <div class="about-label"><span class="section-logo-accent" style="filter:brightness(10);opacity:0.7;margin-right:4px;"></span> 03 // About Me</div>
     <div class="about-grid">
       <div class="about-text">
         <h2>Building at the intersection of sports & data</h2>
@@ -777,7 +897,7 @@ JOIN social_metrics s
 <!-- FOOTER -->
 <footer>
   <div class="footer-info">
-    <strong>Declan Davis</strong>
+    <strong><span style="display:inline-block;width:20px;height:20px;background:url('celtics_logo.png') center/contain no-repeat;vertical-align:middle;margin-right:8px;filter:brightness(10);opacity:0.7;"></span>Declan Davis</strong>
     Business Analytics · Sports Management · © 2026
   </div>
   <div style="display:flex;gap:12px;flex-wrap:wrap;">
