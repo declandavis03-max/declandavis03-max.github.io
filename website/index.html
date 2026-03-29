@@ -105,6 +105,55 @@
     .ticker-item::before { content: '◆'; font-size: 0.5rem; color: var(--green-mid); }
     @keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
+    /* ── TWEETS SECTION ── */
+    .tweets-section { padding: 80px 0; background: var(--bg); }
+    .tweets-inner { max-width: 1100px; margin: 0 auto; padding: 0 48px; }
+    .tweet-follow-btn {
+      font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em;
+      color: var(--green-dark); text-decoration: none; white-space: nowrap;
+      padding: 5px 14px; border: 1px solid var(--border); border-radius: 20px;
+      transition: background 0.2s;
+    }
+    .tweet-follow-btn:hover { background: var(--green-light); }
+    .tweet-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+    }
+    .tweet-card {
+      background: var(--bg2); border: 1px solid var(--border);
+      border-radius: 14px; overflow: hidden;
+      text-decoration: none; color: inherit; display: block;
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+    .tweet-card:hover { transform: translateY(-4px); box-shadow: 0 14px 36px rgba(76,175,130,0.14); }
+    .tweet-card-header {
+      display: flex; align-items: center; gap: 10px;
+      padding: 16px 18px 12px;
+    }
+    .tweet-avatar {
+      width: 38px; height: 38px; border-radius: 50%;
+      background: var(--green); color: white;
+      font-size: 0.78rem; font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .tweet-name { font-size: 0.85rem; font-weight: 700; color: var(--text); }
+    .tweet-handle { font-size: 0.75rem; color: var(--muted); }
+    .tweet-x { margin-left: auto; font-size: 1rem; color: var(--muted); }
+    .tweet-text {
+      font-size: 0.85rem; line-height: 1.65; color: var(--text);
+      padding: 0 18px 14px; margin: 0;
+    }
+    .tweet-img-wrap {
+      width: 100%; overflow: hidden;
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+    }
+    .tweet-img-wrap img { width: 100%; display: block; object-fit: cover; }
+    .tweet-tag {
+      font-size: 0.68rem; font-weight: 600; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--green-dark);
+      padding: 10px 18px; background: var(--green-light);
+    }
+
     /* ── CELTICS LOGO WATERMARK ── */
     .celtics-watermark {
       position: absolute; opacity: 0.04; pointer-events: none; z-index: 0;
@@ -810,53 +859,136 @@ JOIN social_metrics s
 
     <div class="project-body">
       <div>
-        <p class="project-description">
-          This project uses Python to build a predictive model for NBA player Points Per Game (PPG). Rather than relying on static datasets, it scrapes live data directly from Basketball-Reference, pulling current season stats for all active players to ensure the predictions reflect the most up-to-date performance.
-        </p>
-        <p class="project-description">
-          The model factors in both offensive metrics (PPG, usage rate, shooting efficiency) and defensive context (opponent Defensive Rating, DRtg) as well as home/away game splits — since players' performance often varies significantly by venue. This results in more nuanced and accurate predictions than a simple average-based approach.
-        </p>
 
-        <p style="font-size:0.7rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;">Key Highlights</p>
-        <ul class="highlight-list">
-          <li>Scraped live player stats from Basketball-Reference using Python, keeping predictions current with real season data</li>
-          <li>Incorporated opponent Defensive Rating (DRtg) as a key feature to account for matchup difficulty</li>
-          <li>Built separate models for home and away games to capture venue-based performance differences</li>
-          <li>Engineered features from raw stats including shooting efficiency and usage rate to improve model accuracy</li>
-          <li>Designed the pipeline to be rerun easily as new game data becomes available throughout the season</li>
-        </ul>
+        <!-- RESEARCH QUESTION -->
+        <div class="stack-step">
+          <div class="stack-step-header">
+            <span class="step-badge">Research Question</span>
+          </div>
+          <p class="project-description">Using online data from Sports Reference, can there be a model that accurately predicts an NBA player's Points Per Game on any given night during the NBA season?</p>
+        </div>
 
-        <div class="tools-used">
+        <!-- DATA PIPELINE -->
+        <div class="stack-step">
+          <div class="stack-step-header">
+            <span class="step-badge">Step 1</span>
+            <span class="step-title">Data Pipeline</span>
+          </div>
+          <div style="background:var(--green-light);border:1px solid var(--border);border-radius:10px;padding:14px 20px;margin-bottom:16px;font-size:0.82rem;color:var(--green-dark);font-weight:500;">
+            📊 &nbsp;<strong>Websites Used</strong> &nbsp;→&nbsp; <strong>Formula Creation</strong> &nbsp;→&nbsp; <strong>Data Collection & Functions</strong> &nbsp;→&nbsp; <strong>Overall Insights</strong>
+          </div>
+          <p class="project-description" style="margin-bottom:12px;">Found player and team statistics from Sports Reference for the model:</p>
+          <div class="data-fields">
+            <div class="data-field-card">
+              <div class="dfc-label">Team Statistics</div>
+              <div class="dfc-fields">basketball-reference.com/leagues/NBA_2026.html — Defensive & Offensive team ratings</div>
+            </div>
+            <div class="data-field-card">
+              <div class="dfc-label">Player Statistics</div>
+              <div class="dfc-fields">basketball-reference.com/leagues/NBA_2026_per_game.html — Individual per game stats</div>
+            </div>
+          </div>
+          <div style="margin-top:12px;" class="why-box">
+            <div class="why-label">Tools Used</div>
+            <div class="why-item">--> Python</div>
+            <div class="why-item">--> Pandas (pd)</div>
+          </div>
+        </div>
+
+        <!-- FORMULA -->
+        <div class="stack-step">
+          <div class="stack-step-header">
+            <span class="step-badge">Step 2</span>
+            <span class="step-title">Prediction Formula</span>
+          </div>
+          <div class="why-box" style="margin-bottom:14px;">
+            <div class="why-label">Formula Components</div>
+            <div class="why-item">--> <strong>Home Court Factor:</strong> Home +1 point · Away -1 point</div>
+            <div class="why-item">--> <strong>Defensive Rating Adjustment:</strong> (Opp DRtg - League Avg DRtg) × (Player PPG / Team PPG)</div>
+            <div class="why-item">--> <strong>Final Forecast:</strong> Sums base PPG + DRtg adjustment ± Home Court Factor</div>
+          </div>
+          <div class="code-block">
+            <div class="code-label">Final Formula</div>
+            <pre>Predicted_PPG = Current_PPG - (DRtg_ADJ) +/- (Home Court Factor)</pre>
+          </div>
+        </div>
+
+        <!-- DATA COLLECTION & FUNCTIONS -->
+        <div class="stack-step">
+          <div class="stack-step-header">
+            <span class="step-badge">Step 3</span>
+            <span class="step-title">Data Collection & Functions</span>
+          </div>
+          <p class="project-description" style="margin-bottom:14px;">Built guided user parameters so the model accepts a player name, team abbreviation, and game location (Home or Away). Live web scraping pulls Team PPG, Individual PPG, and Team Defensive Rating directly from Basketball-Reference.</p>
+
+          <p style="font-size:0.7rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;">Abbreviation Dictionary</p>
+          <div style="border-radius:10px;overflow:hidden;border:1px solid var(--border);margin-bottom:16px;">
+            <img src="images/Abbrev_dictionary.png" alt="Abbreviation Dictionary" style="width:100%;display:block;">
+          </div>
+
+          <p style="font-size:0.7rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;">Main Function</p>
+          <div style="border-radius:10px;overflow:hidden;border:1px solid var(--border);margin-bottom:16px;">
+            <img src="images/main_function.png" alt="Main Function" style="width:100%;display:block;">
+          </div>
+        </div>
+
+        <!-- EXAMPLE PREDICTION -->
+        <div class="stack-step">
+          <div class="stack-step-header">
+            <span class="step-badge insight-badge">Example</span>
+            <span class="step-title">Example Prediction</span>
+          </div>
+          <div style="border-radius:10px;overflow:hidden;border:1px solid var(--border);margin-bottom:4px;">
+            <img src="images/example_test.png" alt="Example Prediction" style="width:100%;display:block;">
+          </div>
+        </div>
+
+        <!-- OVERALL TAKEAWAYS -->
+        <div class="stack-step">
+          <div class="stack-step-header">
+            <span class="step-badge insight-badge">Insights</span>
+            <span class="step-title">Overall Takeaways</span>
+          </div>
+          <div class="insight-list">
+            <div class="insight-item">--> <strong>Context beats raw metrics</strong> — Defensive Rating and proportional scoring share significantly influence predicted PPG, but player output is heavily dependent on usage rate, game pace, matchup-specific schemes, and teammate availability. <em>Quantitative metrics alone are insufficient without situational context.</em></div>
+            <div class="insight-item">--> <strong>Model simplicity vs. real-world complexity</strong> — A simple formula using Player PPG, Team PPG, and Team DRtg can generate reasonable directional predictions, but basketball is non-linear. Small inputs can have unpredictable effects and external variables like fatigue, injuries, and rotations are not captured.</div>
+            <div class="insight-item">--> <strong>Value of modular code design</strong> — Breaking the project into modular Python functions improved readability, made debugging easier, and allowed for flexible updates. Building modular functions was a highly beneficial experience for overall Python development.</div>
+          </div>
+        </div>
+
+        <!-- LIMITATIONS -->
+        <div class="stack-step">
+          <div class="stack-step-header">
+            <span class="step-badge" style="background:var(--muted);">Limitations</span>
+            <span class="step-title">Limitations & Next Steps</span>
+          </div>
+          <div class="why-box">
+            <div class="why-label">Current Limitations</div>
+            <div class="why-item">--> <strong>Limited feature set:</strong> Only incorporates PPG, Team PPG, Defensive Rating, and location. Key metrics like usage rate, eFG%, and minutes played are excluded</div>
+            <div class="why-item">--> <strong>Web scraping reliability:</strong> Depends on live Basketball-Reference data — any site structure changes can break the pipeline</div>
+            <div class="why-item">--> <strong>Small sample bias:</strong> Per-game stats can be misleading for players with limited minutes or small sample sizes</div>
+          </div>
+        </div>
+
+        <!-- FINAL STATEMENT -->
+        <div class="disclaimer-box" style="margin-top:8px;">
+          <strong>Final Statement:</strong> While the model provides a structured approach to predicting PPG, it highlights that basketball performance is influenced by a wide range of dynamic and contextual factors beyond basic statistical inputs. This project also served as my first experience building modular functions in Python — a great introduction to how powerful and flexible Python can be for data analysis and modeling.
+        </div>
+
+        <div class="tools-used" style="margin-top:24px;">
           <p class="tools-label">Tools & Technologies</p>
           <div class="tools-chips">
             <span class="tool-chip">Python</span>
-            <span class="tool-chip">Web Scraping</span>
             <span class="tool-chip">Pandas</span>
+            <span class="tool-chip">Web Scraping</span>
             <span class="tool-chip">Predictive Modeling</span>
             <span class="tool-chip">Basketball-Reference</span>
-            <span class="tool-chip">Feature Engineering</span>
+            <span class="tool-chip">Modular Functions</span>
           </div>
         </div>
       </div>
 
       <div class="project-sidebar">
-        <div class="sidebar-card">
-          <div class="sidebar-card-header">PPG Trend (Sample)</div>
-          <div class="sidebar-card-body">
-            <svg viewBox="0 0 260 90" style="width:100%;display:block;">
-              <defs>
-                <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stop-color="#4CAF82" stop-opacity="0.2"/>
-                  <stop offset="100%" stop-color="#4CAF82" stop-opacity="0"/>
-                </linearGradient>
-              </defs>
-              <path d="M0,75 C20,70 35,58 55,50 S85,35 110,38 S150,25 180,18 S220,14 260,10" fill="none" stroke="#4CAF82" stroke-width="2" opacity="0.9"/>
-              <path d="M0,75 C20,70 35,58 55,50 S85,35 110,38 S150,25 180,18 S220,14 260,10 L260,90 L0,90Z" fill="url(#g2)"/>
-              <circle cx="180" cy="18" r="3.5" fill="#2d8a5e"/>
-              <circle cx="110" cy="38" r="3.5" fill="#2d8a5e"/>
-            </svg>
-          </div>
-        </div>
         <div class="sidebar-card">
           <div class="sidebar-card-header">Project Details</div>
           <div class="sidebar-card-body">
@@ -865,9 +997,64 @@ JOIN social_metrics s
             <div class="stat-row"><span class="key">Data Source</span><span class="val">Live Scrape</span></div>
             <div class="stat-row"><span class="key">Key Feature</span><span class="val">DRtg · Home/Away</span></div>
             <div class="stat-row"><span class="key">League</span><span class="val">NBA</span></div>
+            <div class="stat-row"><span class="key">Home Bonus</span><span class="val">+1 PPG</span></div>
+            <div class="stat-row"><span class="key">Away Penalty</span><span class="val">-1 PPG</span></div>
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</div>
+
+<!-- TWITTER / INSIGHTS SECTION -->
+<div class="tweets-section">
+  <div class="tweets-inner">
+    <div class="section-divider" style="margin-bottom:40px;padding:0;">
+      <span class="section-logo-accent"></span>
+      <span class="label">04 // Latest Insights on X</span>
+      <div class="line"></div>
+      <a href="https://twitter.com/declandavis17" target="_blank" class="tweet-follow-btn">𝕏 @declandavis17 →</a>
+    </div>
+    <p style="font-size:0.88rem;color:var(--muted);margin-bottom:32px;max-width:600px;">Sharing sports data insights, charts, and analysis. Follow along for more.</p>
+
+    <div class="tweet-grid">
+
+      <a class="tweet-card" href="https://twitter.com/declandavis17" target="_blank">
+        <div class="tweet-card-header">
+          <div class="tweet-avatar">DD</div>
+          <div>
+            <div class="tweet-name">Declan Davis</div>
+            <div class="tweet-handle">@DeclanDavis17 · 4h</div>
+          </div>
+          <div class="tweet-x">𝕏</div>
+        </div>
+        <p class="tweet-text">A class project on the MLB has me thinking. Does money buy rings? 11 of 15 World Series champs ranked top 9 in payroll.</p>
+        <div class="tweet-img-wrap">
+          <img src="IMG_0863.jpeg" alt="MLB Money Rings Chart">
+        </div>
+        <div class="tweet-tag">⚾ MLB · Payroll Analysis</div>
+      </a>
+
+      <a class="tweet-card" href="https://twitter.com/declandavis17" target="_blank">
+        <div class="tweet-card-header">
+          <div class="tweet-avatar">DD</div>
+          <div>
+            <div class="tweet-name">Declan Davis</div>
+            <div class="tweet-handle">@DeclanDavis17 · 5d</div>
+          </div>
+          <div class="tweet-x">𝕏</div>
+        </div>
+        <p class="tweet-text">Breaking down the 2025-26 Celtics through Dean Oliver's Four Factors. FG% drove wins in December. OREB rose in February to compensate for poor shooting — and it worked!</p>
+        <div class="tweet-img-wrap">
+          <img src="IMG_0864.jpeg" alt="Celtics Four Factors Chart">
+        </div>
+        <div class="tweet-tag">🏀 Celtics · Four Factors · Tableau</div>
+      </a>
+
+    </div>
+
+    <div style="text-align:center;margin-top:32px;">
+      <a href="https://twitter.com/declandavis17" target="_blank" class="btn btn-outline" style="font-size:0.78rem;">View All Posts on X →</a>
     </div>
   </div>
 </div>
