@@ -630,6 +630,30 @@
       <span class="thumb-cta">Read More ↓</span>
     </a>
 
+    <a class="proj-thumb" href="#celtics-demand">
+      <div class="thumb-visual">
+        <div class="thumb-bars">
+          <div class="tb" style="height:55%"></div>
+          <div class="tb hi" style="height:85%"></div>
+          <div class="tb" style="height:60%"></div>
+          <div class="tb hi" style="height:95%"></div>
+          <div class="tb" style="height:50%"></div>
+          <div class="tb" style="height:70%"></div>
+          <div class="tb hi" style="height:88%"></div>
+          <div class="tb" style="height:62%"></div>
+        </div>
+      </div>
+      <div class="thumb-body">
+        <div class="thumb-tag">SQL · Tableau · Dashboard</div>
+        <div class="thumb-title">Celtics Home Game Demand Analysis</div>
+        <p class="thumb-desc">Built a proxy Game Attractiveness Score using SQL and Tableau to analyze scheduling and opponent factors driving home game demand.</p>
+        <div class="thumb-chips">
+          <span class="chip">SQL</span><span class="chip">Tableau</span><span class="chip">G.A.S</span>
+        </div>
+      </div>
+      <span class="thumb-cta">Read More ↓</span>
+    </a>
+
   </div>
 </div>
 
@@ -1006,6 +1030,174 @@ JOIN social_metrics s
   </div>
 </div>
 
+<!-- ═══════════════════════════════════════════
+     PROJECT 3 — CELTICS HOME GAME DEMAND
+═══════════════════════════════════════════ -->
+<div class="project-section" id="celtics-demand">
+  <div class="project-inner">
+
+    <div class="project-header">
+      <div>
+        <div class="project-num"><span class="section-logo-accent" style="width:20px;height:20px;vertical-align:middle;margin-right:6px;display:inline-block;"></span>Project 03 · SQL · Tableau</div>
+        <h2 class="project-title">Celtics Home Game<br>Demand Analysis</h2>
+        <p class="project-subtitle">Exploring scheduling and opponent factors that influence fan interest in home games</p>
+      </div>
+      <a class="github-btn" href="https://github.com/declandavis03-max" target="_blank">↗ View on GitHub</a>
+    </div>
+
+    <!-- DASHBOARD IMAGE -->
+    <div style="border-radius:12px;overflow:hidden;border:1px solid var(--border);box-shadow:0 4px 20px rgba(76,175,130,0.1);margin-bottom:40px;">
+      <img src="Celtics_Home_Game_Analysis/images/celtics_home_game_demand.png" alt="Celtics Home Game Demand Dashboard" style="width:100%;display:block;">
+      <div style="padding:12px 18px;background:var(--bg2);font-size:0.78rem;font-weight:600;color:var(--muted);">📊 Celtics Home Game Demand Dashboard</div>
+    </div>
+
+    <!-- INTRO -->
+    <p class="project-description">This project explores how scheduling and opponent factors influence fan interest in Boston Celtics home games. Using SQL for data preparation and Tableau for visualization, the goal is to uncover patterns in demand and demonstrate how data can support decision-making in sports business operations.</p>
+
+    <!-- PIPELINE -->
+    <div style="background:var(--green-light);border:1px solid var(--border);border-radius:10px;padding:16px 24px;margin-bottom:40px;font-size:0.82rem;color:var(--green-dark);font-weight:500;">
+      📊 &nbsp;<strong>Data</strong> &nbsp;→&nbsp; <strong>SQL Database</strong> &nbsp;→&nbsp; <strong>SQL Cleaning</strong> &nbsp;→&nbsp; <strong>Dashboard Design</strong> &nbsp;→&nbsp; <strong>Overall Insights</strong>
+    </div>
+
+    <div class="project-body">
+      <div>
+
+        <!-- DATA -->
+        <div class="stack-step">
+          <div class="stack-step-header">
+            <span class="step-badge">Step 1</span>
+            <span class="step-title">Data</span>
+          </div>
+          <p class="project-description" style="margin-bottom:14px;">The dataset was sourced from Basketball Reference and includes Celtics game schedule information. Data was cleaned and structured in SQL, with key fields including game number, opponent, game timing, and indicators such as home/away and special event games. The dataset was filtered to focus on home games only.</p>
+          <p style="font-size:0.7rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;">Data Before Cleaning (CSV)</p>
+          <div style="border-radius:10px;overflow:hidden;border:1px solid var(--border);margin-bottom:4px;">
+            <img src="Celtics_Home_Game_Analysis/images/celtics_schedule_before_cleaning.png" alt="Schedule Before Cleaning" style="width:100%;display:block;">
+          </div>
+        </div>
+
+        <!-- SQL CLEANING -->
+        <div class="stack-step">
+          <div class="stack-step-header">
+            <span class="step-badge">Step 2</span>
+            <span class="step-title">SQL Cleaning</span>
+          </div>
+
+          <p style="font-size:0.7rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;">1. Drop Unwanted Columns</p>
+          <div style="border-radius:10px;overflow:hidden;border:1px solid var(--border);margin-bottom:16px;">
+            <img src="Celtics_Home_Game_Analysis/images/dropped_tables.png" alt="Dropped Tables" style="width:100%;display:block;">
+          </div>
+
+          <p style="font-size:0.7rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;">2. Filtered Home Games</p>
+          <div style="border-radius:10px;overflow:hidden;border:1px solid var(--border);margin-bottom:16px;">
+            <img src="Celtics_Home_Game_Analysis/images/filtered_to_home_games.png" alt="Filtered Home Games" style="width:100%;display:block;">
+          </div>
+
+          <p style="font-size:0.7rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;">3. Split Date Column</p>
+          <div style="border-radius:10px;overflow:hidden;border:1px solid var(--border);margin-bottom:4px;">
+            <img src="Celtics_Home_Game_Analysis/images/split_date_query.png" alt="Split Date Query" style="width:100%;display:block;">
+          </div>
+        </div>
+
+        <!-- FORMULA -->
+        <div class="stack-step">
+          <div class="stack-step-header">
+            <span class="step-badge">Step 3</span>
+            <span class="step-title">Game Attractiveness Score (G.A.S)</span>
+          </div>
+          <p class="project-description" style="margin-bottom:14px;">A custom "Game Attractiveness Score" (G.A.S) was developed as a proxy for demand due to limited attendance variability in the dataset. The score assigns weighted values based on key demand drivers including weekend games, marquee opponents, and special game contexts.</p>
+
+          <p style="font-size:0.7rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;">Attractiveness Score Formula</p>
+          <div style="border-radius:10px;overflow:hidden;border:1px solid var(--border);margin-bottom:16px;">
+            <img src="Celtics_Home_Game_Analysis/images/attractiveness_score.png" alt="Attractiveness Score" style="width:100%;display:block;">
+          </div>
+
+          <p style="font-size:0.7rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;">Scoring Metrics</p>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:4px;">
+            <div style="border-radius:10px;overflow:hidden;border:1px solid var(--border);">
+              <img src="Celtics_Home_Game_Analysis/images/opponent_tier.png" alt="Opponent Tier" style="width:100%;display:block;">
+              <div style="padding:8px 12px;background:var(--bg2);font-size:0.7rem;font-weight:600;color:var(--muted);">Opponent Tier</div>
+            </div>
+            <div style="border-radius:10px;overflow:hidden;border:1px solid var(--border);">
+              <img src="Celtics_Home_Game_Analysis/images/is_weekend.png" alt="Is Weekend" style="width:100%;display:block;">
+              <div style="padding:8px 12px;background:var(--bg2);font-size:0.7rem;font-weight:600;color:var(--muted);">Weekend Flag</div>
+            </div>
+            <div style="border-radius:10px;overflow:hidden;border:1px solid var(--border);">
+              <img src="Celtics_Home_Game_Analysis/images/prime_month.png" alt="Prime Month" style="width:100%;display:block;">
+              <div style="padding:8px 12px;background:var(--bg2);font-size:0.7rem;font-weight:600;color:var(--muted);">Prime Month</div>
+            </div>
+            <div style="border-radius:10px;overflow:hidden;border:1px solid var(--border);">
+              <img src="Celtics_Home_Game_Analysis/images/prime_time.png" alt="Prime Time" style="width:100%;display:block;">
+              <div style="padding:8px 12px;background:var(--bg2);font-size:0.7rem;font-weight:600;color:var(--muted);">Prime Time</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- INSIGHTS -->
+        <div class="stack-step">
+          <div class="stack-step-header">
+            <span class="step-badge insight-badge">Insights</span>
+            <span class="step-title">Overall Insights</span>
+          </div>
+          <div class="insight-list">
+            <div class="insight-item">--> <strong>Weekend and prime matchups drive highest demand</strong> — scheduling on weekends with marquee opponents significantly elevates the Game Attractiveness Score</div>
+            <div class="insight-item">--> <strong>Opponent strength is a key driver of fan interest</strong> — rivalry and high-profile opponents consistently generate higher expected demand</div>
+            <div class="insight-item">--> <strong>Demand varies across the season based on scheduling</strong> — prime months show noticeably higher engagement patterns than off-peak periods</div>
+            <div class="insight-item">--> <strong>Weekday games generally show lower engagement</strong> — consistent across the dataset regardless of opponent quality</div>
+          </div>
+        </div>
+
+        <!-- LIMITATIONS & FUTURE WORK -->
+        <div class="stack-step">
+          <div class="stack-step-header">
+            <span class="step-badge" style="background:var(--muted);">Limitations</span>
+            <span class="step-title">Limitations & Future Work</span>
+          </div>
+          <div class="why-box" style="margin-bottom:14px;">
+            <div class="why-label">Current Limitations</div>
+            <div class="why-item">--> Uses a proxy metric (G.A.S) rather than actual ticket sales or attendance data</div>
+            <div class="why-item">--> Dataset is limited to schedule-level information — no pricing, resale activity, or customer segmentation</div>
+            <div class="why-item">--> Model estimates demand based on assumed drivers rather than direct measurement</div>
+          </div>
+          <div class="why-box">
+            <div class="why-label">Future Work</div>
+            <div class="why-item">--> Develop a "rest/anticipation" metric — longer gaps between home games may lead to higher fan anticipation</div>
+            <div class="why-item">--> Integrate real ticketing or CRM data (tickets sold, revenue, resale prices) to validate and enhance the proxy model</div>
+            <div class="why-item">--> Incorporate fan segmentation, promotional effectiveness, and predictive modeling</div>
+          </div>
+        </div>
+
+        <div class="tools-used" style="margin-top:8px;">
+          <p class="tools-label">Tools & Technologies</p>
+          <div class="tools-chips">
+            <span class="tool-chip">SQL</span>
+            <span class="tool-chip">Tableau</span>
+            <span class="tool-chip">Basketball-Reference</span>
+            <span class="tool-chip">Game Attractiveness Score</span>
+            <span class="tool-chip">Data Cleaning</span>
+            <span class="tool-chip">Sports Business Analytics</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- SIDEBAR -->
+      <div class="project-sidebar">
+        <div class="sidebar-card">
+          <div class="sidebar-card-header">Project Details</div>
+          <div class="sidebar-card-body">
+            <div class="stat-row"><span class="key">Type</span><span class="val">Dashboard</span></div>
+            <div class="stat-row"><span class="key">Data Source</span><span class="val">Basketball-Reference</span></div>
+            <div class="stat-row"><span class="key">SQL Tool</span><span class="val">SQL Cleaning</span></div>
+            <div class="stat-row"><span class="key">Viz Tool</span><span class="val">Tableau</span></div>
+            <div class="stat-row"><span class="key">Metric</span><span class="val">G.A.S Score</span></div>
+            <div class="stat-row"><span class="key">Focus</span><span class="val">Home Games</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- TWITTER / INSIGHTS SECTION -->
 <div class="tweets-section">
   <div class="tweets-inner">
@@ -1056,7 +1248,7 @@ JOIN social_metrics s
 <!-- ABOUT -->
 <div class="about-wrap" id="about">
   <div class="about-inner">
-    <div class="about-label"><span class="section-logo-accent" style="filter:brightness(10);opacity:0.7;margin-right:4px;"></span> 03 // About Me</div>
+    <div class="about-label"><span class="section-logo-accent" style="filter:brightness(10);opacity:0.7;margin-right:4px;"></span> 04 // About Me</div>
     <div class="about-grid">
       <div class="about-text">
         <h2>Building at the intersection of sports & data</h2>
