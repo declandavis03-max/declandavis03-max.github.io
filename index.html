@@ -442,6 +442,48 @@
     .insight-item { font-size: 0.88rem; line-height: 1.65; color: var(--text); padding: 12px 16px; background: var(--bg2); border: 1px solid var(--border); border-left: 3px solid var(--green); border-radius: 0 8px 8px 0; }
     .insight-item strong { color: var(--green-dark); }
 
+    /* ── EXPERIENCE ── */
+    .exp-section { padding: 80px 0; background: var(--bg2); }
+    .exp-inner { max-width: 1100px; margin: 0 auto; padding: 0 48px; }
+    .exp-group-label {
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--green-dark); margin: 36px 0 16px;
+    }
+    .exp-group-label:first-of-type { margin-top: 0; }
+    .exp-card {
+      background: white; border: 1px solid var(--border); border-radius: 12px;
+      padding: 24px 28px; margin-bottom: 18px;
+      transition: box-shadow 0.25s, transform 0.25s;
+    }
+    .exp-card:hover { box-shadow: 0 10px 30px rgba(76,175,130,0.12); transform: translateY(-2px); }
+    .exp-card-header {
+      display: flex; justify-content: space-between; align-items: flex-start;
+      gap: 20px; flex-wrap: wrap; margin-bottom: 6px;
+    }
+    .exp-role { font-size: 1.02rem; font-weight: 700; color: var(--text); }
+    .exp-company { font-size: 0.85rem; color: var(--green-dark); font-weight: 600; margin-top: 3px; }
+    .exp-meta { font-size: 0.76rem; color: var(--muted); text-align: right; white-space: nowrap; padding-top: 3px; }
+    .exp-current-badge {
+      display: inline-block; font-size: 0.6rem; font-weight: 700; letter-spacing: 0.08em;
+      text-transform: uppercase; background: var(--green); color: white;
+      padding: 3px 10px; border-radius: 20px; margin-left: 8px; vertical-align: middle;
+    }
+    .exp-bullets { list-style: none; display: flex; flex-direction: column; gap: 9px; margin-top: 16px; }
+    .exp-bullets li {
+      display: flex; gap: 10px; font-size: 0.87rem; line-height: 1.65; color: #2a4a3a;
+    }
+    .exp-bullets li::before {
+      content: ''; width: 6px; height: 6px; border-radius: 50%;
+      background: var(--green); flex-shrink: 0; margin-top: 7px;
+    }
+    .exp-leadership-strip {
+      background: var(--green-light); border: 1px solid var(--border); border-radius: 10px;
+      padding: 16px 24px; display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 10px;
+    }
+    .exp-leadership-strip .exp-role { font-size: 0.92rem; }
+    .exp-leadership-strip .exp-company { font-size: 0.8rem; }
+
     /* ── ANIMATIONS ── */
     @keyframes fadeUp { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
     .hero-content { animation: fadeUp 0.7s ease both; }
@@ -472,6 +514,7 @@
   <span class="nav-logo"><span class="nav-logo-img"></span>Declan Davis</span>
   <ul class="nav-links">
     <li><a href="#projects">Projects</a></li>
+    <li><a href="#experience">Experience</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="https://twitter.com/declandavis17" target="_blank">𝕏 Twitter</a></li>
   </ul>
@@ -1607,12 +1650,97 @@ JOIN social_metrics s
   </div>
 </div>
 
+<!-- ═══════════════════════════════════════════
+     EXPERIENCE
+═══════════════════════════════════════════ -->
+<div class="exp-section" id="experience">
+  <div class="exp-inner">
+    <div class="section-divider" style="margin-bottom:40px;">
+      <span class="section-logo-accent"></span>
+      <span class="label">03 // Experience</span>
+      <div class="line"></div>
+    </div>
+
+    <!-- ANALYTICS EXPERIENCE -->
+    <div class="exp-group-label">Analytics Experience</div>
+
+    <div class="exp-card">
+      <div class="exp-card-header">
+        <div>
+          <div class="exp-role">Business Intelligence and Operations Intern <span class="exp-current-badge">Current</span></div>
+          <div class="exp-company">Boston Celtics · Boston, MA</div>
+        </div>
+        <div class="exp-meta">June 2026 – September 2026</div>
+      </div>
+      <ul class="exp-bullets">
+        <li>Conducted large-scale CRM data quality audits on 1M+ records in the Data Warehouse using DBeaver and SQL, uncovering 100K+ invalid, null, or duplicate data points; implemented cross-system reconciliation logic with SQL joins to restore missing data and improve record completeness.</li>
+        <li>Built advanced SQL analyses using CTEs, aggregations, and comparative performance metrics to evaluate audience engagement across 500+ NBA broadcasts and identify drivers of national and local ratings performance.</li>
+        <li>Analyzed 500+ Season Ticket Membership cancellation responses, developing a churn-driver framework that transformed open-ended feedback into actionable business insights.</li>
+      </ul>
+    </div>
+
+    <div class="exp-card">
+      <div class="exp-card-header">
+        <div>
+          <div class="exp-role">Marketing/Statistics Intern</div>
+          <div class="exp-company">The Tournament (TBT/TST) · Boston, MA</div>
+        </div>
+        <div class="exp-meta">May 2025 – Aug 2025</div>
+      </div>
+      <ul class="exp-bullets">
+        <li>Managed and updated three large-scale data warehouses, maintaining accuracy across thousands of data points for team and league reporting.</li>
+      </ul>
+    </div>
+
+    <div class="exp-card">
+      <div class="exp-card-header">
+        <div>
+          <div class="exp-role">Business Analyst / Marketing Intern</div>
+          <div class="exp-company">ShotQuality · Boston, MA</div>
+        </div>
+        <div class="exp-meta">Jan 2025 – Jun 2025</div>
+      </div>
+      <ul class="exp-bullets">
+        <li>Managed and organized an Excel database of 400+ NBA injury records (March–June), supporting the launch of ShotQuality's injury detection software used by sportsbooks to adjust betting lines in real time.</li>
+      </ul>
+    </div>
+
+    <!-- ADDITIONAL EXPERIENCE -->
+    <div class="exp-group-label">Additional Experience</div>
+
+    <div class="exp-card">
+      <div class="exp-card-header">
+        <div>
+          <div class="exp-role">Financial Planning / Marketing Intern</div>
+          <div class="exp-company">Raskin Planning Group · Boston, MA</div>
+        </div>
+        <div class="exp-meta">June 2025 – May 2026</div>
+      </div>
+      <ul class="exp-bullets">
+        <li>Organized and updated client Assets Under Management (AUM) across 100+ high-profile portfolios, ensuring data accuracy for quarterly performance reviews, compliance reporting, and annual review letters.</li>
+      </ul>
+    </div>
+
+    <!-- LEADERSHIP -->
+    <div class="exp-group-label">Leadership & Activities</div>
+
+    <div class="exp-leadership-strip">
+      <div>
+        <div class="exp-role">Member/Player, Captain '25-'26</div>
+        <div class="exp-company">Suffolk University Basketball Team · Boston, MA</div>
+      </div>
+      <div class="exp-meta">Sept 2023 – Present</div>
+    </div>
+
+  </div>
+</div>
+
 <!-- TWITTER / INSIGHTS SECTION -->
 <div class="tweets-section">
   <div class="tweets-inner">
     <div class="section-divider" style="margin-bottom:40px;padding:0;">
       <span class="section-logo-accent"></span>
-      <span class="label">03 // Latest Insights on X</span>
+      <span class="label">04 // Latest Insights on X</span>
       <div class="line"></div>
       <a href="https://twitter.com/declandavis17" target="_blank" class="tweet-follow-btn">𝕏 @declandavis17 →</a>
     </div>
@@ -1657,13 +1785,13 @@ JOIN social_metrics s
 <!-- ABOUT -->
 <div class="about-wrap" id="about">
   <div class="about-inner">
-    <div class="about-label"><span class="section-logo-accent" style="filter:brightness(10);opacity:0.7;margin-right:4px;"></span> 04 // About Me</div>
+    <div class="about-label"><span class="section-logo-accent" style="filter:brightness(10);opacity:0.7;margin-right:4px;"></span> 05 // About Me</div>
     <div class="about-grid">
       <div class="about-text">
         <h2>Building at the intersection of sports & data</h2>
-        <p>I'm <strong>Declan Davis</strong>, a Business Analytics & Sports Management student with a passion for using data to drive decisions in the sports world.</p>
-        <p>From building <strong>fan intelligence dashboards</strong> for the Boston Celtics to <strong>predictive scoring models</strong> for the NBA, I focus on projects that have real-world relevance in sports strategy and operations.</p>
-        <p>My toolkit includes <strong>Python, SQL, MySQL, Power BI, and DAX</strong> — and I'm always looking for new ways to apply data science to sports problems.</p>
+        <p>I'm <strong>Declan Davis</strong>, a Business Analytics & Information Systems and Sports Management student at <strong>Suffolk University's Sawyer Business School</strong> (anticipated May 2027) with a passion for using data to drive decisions in the sports world.</p>
+        <p>I'm currently a <strong>Business Intelligence and Operations Intern with the Boston Celtics</strong>, and I've previously worked with The Tournament (TBT/TST) and ShotQuality. Outside of internships, I build <strong>fan intelligence dashboards</strong> and <strong>predictive scoring models</strong> for the NBA — projects that have real-world relevance in sports strategy and operations.</p>
+        <p>My toolkit includes <strong>Python, SQL, MySQL, Power BI, DAX, and Excel</strong> — and I'm always looking for new ways to apply data science to sports problems.</p>
       </div>
       <div class="skills-panel">
         <div class="skill-row"><span class="sk-name">Python</span><div class="sk-bar"><div class="sk-fill" style="width:85%"></div></div><span class="sk-pct">85%</span></div>
