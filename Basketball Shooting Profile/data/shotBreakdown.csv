@@ -1,0 +1,113 @@
+Shot #,Origin,playType,shotLocation,shotType,contestLevel,result
+1,Freelance,Space,Wing Three,Catch and Shoot,Medium,Make
+2,Freelance,Space,Elbow,Off Dribble,Low,Miss 
+3,Set Play,Cut ,Restricted Arc,Shot Fake,High ,Miss 
+4,Set Play,DHO,Elbow,Off Dribble,High ,Miss 
+5,Set Play,Space,Corner three,Catch and Shoot,Medium,Miss 
+6,Freelance,Space,Wing Three,Catch and Shoot,High ,Miss 
+7,Freelance,Space,Slot,Off Dribble,Low,Miss 
+8,Set Play,Pin Down,Wing Three,Off Dribble,Medium,Miss 
+9,Set Play,DHO,Restricted Arc,Layup,High ,Miss 
+10,Set Play,Space,Wing Three,Catch and Shoot,Medium,Make
+11,Set Play,Pin Down,Wing Three,Catch and Shoot,Medium,Make
+12,Set Play,Cut ,Deep Paint,Layup,Low,Make
+13,Freelance,Space,Slot,Catch and Shoot,Low,Miss 
+14,Freelance,Space,Corner three,Catch and Shoot,Low,Miss 
+15,Freelance,Space,Elbow,Off Dribble,High ,Miss 
+16,Freelance,Space,Slot,Catch and Shoot,Medium,Miss 
+17,Freelance,Space,Wing Three,Catch and Shoot,Medium,Make
+18,Freelance,Space,Wing Three,Catch and Shoot,Medium,Make
+19,Freelance,Space,Deep Paint,Off Dribble,High ,Make
+20,Freelance,Space,Wing Three,Off Dribble,Low,Make
+21,Freelance,Space,Wing Three,Catch and Shoot,Medium,Make
+22,Freelance,Space,Wing Three,Shot Fake,High ,Miss 
+23,Set Play,Ball Screen,Short Corner,Off Dribble,Low,Miss 
+24,Set Play,Pin Down,Wing Three,Catch and Shoot,High ,Miss 
+25,Freelance,Space,Wing Three,Catch and Shoot,High ,Make
+26,Set Play,Pin Down,Wing Three,Catch and Shoot,Low,Miss 
+27,Set Play,DHO,Slot,Off Dribble,Low,Make
+28,Set Play,Ball Screen,Restricted Arc,Layup,Medium,Make
+29,Freelance,Space,Slot,Catch and Shoot,Medium,Miss 
+30,Freelance,Space,Slot,Catch and Shoot,Medium,Miss 
+31,Freelance,Space,Wing Three,Catch and Shoot,Medium,Make
+32,Freelance,Isolation,Restricted Arc,Layup,Medium,Make
+33,Set Play,Cut ,Restricted Arc,Layup,Medium,Make
+34,Freelance,Isolation,Slot,Off Dribble,High ,Make
+35,Set Play,Space,Slot,Catch and Shoot,High ,Make
+36,Freelance,Space,Corner three,Catch and Shoot,Low,Make
+37,Freelance,Isolation,Short Corner,Off Dribble,High ,Miss 
+38,Set Play,Cut ,Restricted Arc,Layup,Low,Make
+39,Freelance,Space,Slot,Catch and Shoot,High ,Make
+40,Freelance,Space,Slot,Catch and Shoot,Low,Miss 
+41,Freelance,Space,Wing Three,Catch and Shoot,Low,Make
+42,Freelance,Ball Screen,Wing Three,Off Dribble,High ,Miss 
+43,Freelance,Space,Wing Three,Catch and Shoot,Low,Miss 
+44,Freelance,Space,Wing Three,Shot Fake,Medium,Miss 
+45,Set Play,DHO,Wing Three,Catch and Shoot,Medium,Miss 
+46,Set Play,Zoom,Wing Three,Catch and Shoot,Low,Miss 
+47,Set Play,Zoom,Wing Three,Catch and Shoot,Medium,Miss 
+48,Set Play,Pin Down,Wing Three,Catch and Shoot,Medium,Miss 
+49,Set Play,Space,Slot,Catch and Shoot,Medium,Miss 
+50,Freelance,Space,Corner three,Catch and Shoot,High ,Make
+51,Set Play,Zoom,Slot,Off Dribble,High ,Make
+52,Set Play,DHO,Restricted Arc,Shot Fake,Low,Make
+53,Transition,Space,Restricted Arc,Layup,High ,Make
+54,Freelance,Space,Slot,Catch and Shoot,Medium,Miss 
+55,Set Play,Pin Down,Wing Three,Catch and Shoot,Medium,Miss 
+56,Set Play,DHO,Slot,Off Dribble,Medium,Miss 
+57,Set Play,Pin Down,Wing Three,Catch and Shoot,Medium,Make
+58,Transition,Space,Corner three,Shot Fake,High ,Miss 
+59,Freelance,Space,Corner three,Shot Fake,High ,Miss 
+60,Freelance,Space,Wing Three,Shot Fake,High ,Make
+61,Freelance,Space,Corner three,Shot Fake,High ,Make
+62,Set Play,Pin Down,Wing Three,Off Dribble,Medium,Make
+63,Freelance,Space,Corner three,Catch and Shoot,High ,Miss 
+64,Freelance,Space,Slot,Catch and Shoot,Medium,Miss 
+65,Set Play,Pin Down,Slot,Catch and Shoot,Low,Miss 
+66,Freelance,Space,Slot,Catch and Shoot,Medium,Miss 
+67,Freelance,Space,Corner three,Catch and Shoot,Low,Miss 
+68,Set Play,Pin Down,Restricted Arc,Layup,Medium,Make
+69,Freelance,Space,Slot,Catch and Shoot,High ,Miss 
+70,Freelance,Space,Slot,Catch and Shoot,Medium,Miss 
+71,Set Play,Pin Down,Wing Three,Off Dribble,High ,Make
+72,Transition,Cut ,Restricted Arc,Layup,Medium,Make
+73,Set Play,Pin Down,Wing Three,Catch and Shoot,Low,Make
+74,Set Play,Pin Down,Restricted Arc,Shot Fake,Low,Make
+75,Set Play,Space,Wing Three,Catch and Shoot,Medium,Miss 
+76,Set Play,Pin Down,Wing Three,Off Dribble,High ,Miss 
+77,Set Play,Pin Down,Wing Three,Catch and Shoot,High ,Miss 
+78,Freelance,Space,Wing Three,Shot Fake,High ,Miss 
+79,Set Play,Pin Down,Wing Three,Catch and Shoot,Medium,Make
+80,Freelance,Space,Corner three,Catch and Shoot,High ,Miss 
+81,Set Play,Pin Down,Deep Paint,Fadeaway,High ,Make
+82,Freelance,Space,Wing Three,Catch and Shoot,Medium,Miss 
+83,Set Play,Space,Slot,Catch and Shoot,Medium,Make
+84,Freelance,Space,Wing Three,Shot Fake,High ,Miss 
+85,Freelance,Space,Wing Three,Catch and Shoot,Medium,Miss 
+86,Freelance,Space,Corner three,Catch and Shoot,Low,Miss 
+87,Set Play,Pin Down,Restricted Arc,Layup,Medium,Make
+88,Set Play,Pin Down,Wing Three,Catch and Shoot,Low,Miss 
+89,Freelance,Space,Corner three,Catch and Shoot,Low,Miss 
+90,Transition,Space,Corner three,Catch and Shoot,Low,Make
+91,Freelance,Space,Wing Three,Catch and Shoot,Medium,Make
+92,Freelance,Space,Wing Three,Catch and Shoot,Medium,Make
+93,Set Play,Pin Down,Wing Three,Catch and Shoot,Medium,Miss 
+94,Freelance,Space,Slot,Catch and Shoot,High ,Miss 
+95,Freelance,Space,Slot,Shot Fake,Medium,Miss 
+96,Freelance,Space,Wing Three,Catch and Shoot,High ,Miss 
+97,Freelance,Space,Wing Three,Catch and Shoot,High ,Miss 
+98,Freelance,Cut ,Deep Paint,Catch and Shoot,High ,Make
+99,Freelance,Space,Wing Three,Catch and Shoot,Low,Miss 
+100,Freelance,DHO,Wing Three,Catch and Shoot,Medium,Miss 
+101,Freelance,Space,Slot,Catch and Shoot,Medium,Miss 
+102,Freelance,Space,Slot,Catch and Shoot,High ,Miss 
+103,Freelance,Space,Wing Three,Catch and Shoot,Low,Make
+104,Freelance,Space,Slot,Catch and Shoot,Low,Make
+105,Freelance,Space,Wing Three,Catch and Shoot,Low,Miss 
+106,Freelance,Space,Slot,Catch and Shoot,High ,Miss 
+107,Freelance,Space,Wing Three,Catch and Shoot,High ,Make
+108,Set Play,Ball Screen,Wing Three,Catch and Shoot,Medium,Miss 
+109,Set Play,Cut ,Restricted Arc,Layup,High ,Make
+110,Set Play,Pin Down,Wing Three,Catch and Shoot,Medium,Make
+111,Set Play,Space,Wing Three,Catch and Shoot,High ,Make
+112,Freelance,Space,Slot,Catch and Shoot,High ,Make
